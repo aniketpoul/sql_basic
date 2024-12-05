@@ -1,0 +1,99 @@
+create database student_info;
+use student_info;
+create table student(
+        no int,
+		Name varchar(255),
+        Department varchar(255),
+        age int,
+        DOA date,
+        Fee int,
+        Gender varchar(255)
+        );
+
+alter table student add column age int;
+show tables;
+
+select * from student;
+
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (1, 'Piyush', 20, 'civil', '2014-04-15', 120, 'Male' );
+select * from student;
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (2, 'shivam', 21, 'chemical', '2013-04-25', 100, 'Male' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (3, 'sudha', 22, 'it', '2002-09-14', 200, 'FeMale' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (4, 'surya', 23, 'mechanical', '1996-06-22', 250, 'Male' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (5, 'rohit', 24, 'electrical', '2012-08-12', 154, 'Male' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (6, 'mohit', 25, 'electronic', '2021-05-21', 236, 'Male' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (7, 'sneha', 26, 'history', '2013-06-17', 450, 'FeMale' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (8, 'yash', 27, 'hindi', '2014-04-15', 400, 'Male' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (9, 'nande', 28, 'marathi', '2021-05-13', 65, 'Male' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (10, 'saurabh', 29, 'psychology', '2015-07-15', 780, 'Male' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (11, 'neha', 30, 'computer', '2023-04-13', 125, 'FeMale' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (12, 'nishant', 31, 'geography', '2024-05-25', 456, 'Male' );
+insert into student(no, Name, age, Department, DOA, Fee, Gender) values (13, 'aranav', 32, 'sanskrit', '2024-05-15', 852, 'Male' );
+
+select * from student;
+
+select Department,Fee from student;
+
+select distinct(Name) from student;
+
+select distinct(Fee) from student;
+
+select count(Name) from stuent;
+
+select count(Department) from student;
+
+select * from student where Department = 'civil';
+
+select * from stuent where Gender= 'Male';
+
+select * from student where no>10;
+
+select * from student where Fee between 150 and 250;
+
+select * from student where Name like 's%';
+
+select * from student where age>18;
+
+select * from student order by Fee;
+
+select * from student order by Fee desc;
+
+select * from student where department= 'civil'  and Name like 'P%';
+
+select * from stuent where fee = 100 or Gender = 'Female';
+
+select * from student where not department = 'chemical';
+
+select * from student where Name not like 's%';
+
+select * from student where no not between 5  and 15;
+
+update student set Name= 'amit' where no=1;
+
+delete from stuent where Name = 'sudha';
+
+select * from student Limit 3;
+
+select min(Fee) from student;
+
+select max(Fee) from student;
+
+select sum(Fee) from student where Department='civil';
+
+select no as no_list from student;
+
+alter table student add teacher varchar(255);
+
+alter table student drop column teacher;
+
+alter table student add column DOA year;
+
+select * from stuent where DOA = '2014-04-15';
+
+
+
+
+
+ 
+
+
